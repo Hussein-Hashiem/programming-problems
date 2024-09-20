@@ -7,12 +7,14 @@ This repository contains a collection of solved programming problems using C++. 
 - **Prefix Sum** 
 - **STLs** 
 - **Binary Search** 
+- **Two Pointers** 
 
 ## Source of Problems
 - **Frequency Array Sheet** https://codeforces.com/group/isP4JMZTix/contest/380288 
 - **Prefix Sum Sheet** https://codeforces.com/group/isP4JMZTix/contest/386415
 - **STLs Sheet** https://codeforces.com/group/isP4JMZTix/contest/392597
 - **Binary Search Sheet** https://codeforces.com/group/isP4JMZTix/contest/379072
+- **Two Pointers Sheet** https://codeforces.com/group/isP4JMZTix/contest/380008
 
 ## How to Use
 

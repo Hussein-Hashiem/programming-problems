@@ -9,6 +9,7 @@ This repository contains a collection of solved programming problems using C++. 
 - **Binary Search** 
 - **Two Pointers**
 - **Bitmasks** 
+- **Number Theory** 
 
 ## Source of Problems
 - **Frequency Array Sheet** https://codeforces.com/group/isP4JMZTix/contest/380288 
@@ -17,6 +18,7 @@ This repository contains a collection of solved programming problems using C++. 
 - **Binary Search Sheet** https://codeforces.com/group/isP4JMZTix/contest/379072
 - **Two Pointers Sheet** https://codeforces.com/group/isP4JMZTix/contest/380008
 - **Bitmasks Sheet** https://codeforces.com/group/isP4JMZTix/contest/395644
+- **Number Theory Sheet** https://codeforces.com/group/isP4JMZTix/contest/397371
 
 ## How to Use
 

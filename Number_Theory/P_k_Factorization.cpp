@@ -1,0 +1,93 @@
+// Hussein Hashiem
+// إِنَّ اللَّهَ وَمَلائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا
+// وَمَا لَنَا أَلَّا نَتَوَكَّلَ عَلَى اللَّهِ وَقَدْ هَدَانَا سُبُلَنَا
+#include <iostream>
+#include <cmath>
+#include <climits>
+#include <algorithm>
+#include <string>
+#include <cstring>
+#include <array>
+#include <vector>
+#include <set>
+#include <iomanip>
+#include <optional>
+#include <iterator>
+#include <deque>
+#include <list>
+#include <forward_list>
+#include <utility>
+#include <map>
+#include <numeric>
+#include <bitset>
+using namespace std;
+#define _CRT_SECURE_NO_WARNINGS
+#define ll long long
+#define ld long double
+#define newline cout << endl
+#define Test_Cases \
+    ll t;          \
+    cin >> t;      \
+    while (t--)
+#define fs fixed << setprecision
+#define ABO_MAZEN                     \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL)
+#define TEMP \
+    ll temp; \
+    cin >> temp
+#define PAIR_TEMP               \
+    ll first_temp, second_temp; \
+    cin >> first_temp >> second_temp
+
+// BEFORE coding are you sure you understood the statement correctly?
+// PLEASE do not forget to read the sample explanation carefully.
+// WATCH out for overflows & RTs in general.
+// TEST your idea or code on the corner cases.
+// ANALYZE each idea you have thoroughly.
+
+// =========================
+// =========================
+
+vector<ll> primefactor(ll n)
+{
+    vector<ll> ret;
+    for (ll i = 2; i * i <= n; i++)
+    {
+        if (n % i == 0)
+        {
+            while (n % i == 0)
+            {
+                ret.push_back(i);
+                n /= i;
+            }
+        }
+    }
+    if (n > 1)
+        ret.push_back(n);
+    return ret;
+}
+
+int main()
+{
+    ABO_MAZEN;
+    ll n, k;
+    cin >> n >> k;
+    vector<ll> ans = primefactor(n);
+    if (ans.size() < k)
+        cout << -1;
+    else
+    {
+        while (ans.size() > k)
+        {
+            ll f_t = ans[0], s_t = ans[1];
+            ans.erase(ans.begin(), ans.begin() + 2);
+            ans.push_back(f_t * s_t);
+        }
+        for (auto it : ans)
+            cout << it << ' ';
+    }
+    newline;
+    return 0;
+}

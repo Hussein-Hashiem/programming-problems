@@ -1,0 +1,77 @@
+// Hussein Hashiem
+// إِنَّ اللَّهَ وَمَلائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا
+// وَمَا لَنَا أَلَّا نَتَوَكَّلَ عَلَى اللَّهِ وَقَدْ هَدَانَا سُبُلَنَا
+#include <iostream>
+#include <cmath>
+#include <climits>
+#include <algorithm>
+#include <string>
+#include <cstring>
+#include <array>
+#include <vector>
+#include <set>
+#include <iomanip>
+#include <optional>
+#include <iterator>
+#include <deque>
+#include <list>
+#include <forward_list>
+#include <utility>
+#include <map>
+#include <numeric>
+#include <bitset>
+using namespace std;
+#define _CRT_SECURE_NO_WARNINGS
+#define ll long long
+#define ld long double
+#define newline cout << endl
+#define Test_Cases \
+    ll t;          \
+    cin >> t;      \
+    while (t--)
+#define fs fixed << setprecision
+#define ABO_MAZEN                     \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL)
+#define TEMP \
+    ll temp; \
+    cin >> temp
+#define PAIR_TEMP               \
+    ll first_temp, second_temp; \
+    cin >> first_temp >> second_temp
+
+// BEFORE coding are you sure you understood the statement correctly?
+// PLEASE do not forget to read the sample explanation carefully.
+// WATCH out for overflows & RTs in general.
+// TEST your idea or code on the corner cases.
+// ANALYZE each idea you have thoroughly.
+
+// =========================
+// =========================
+int n, m;
+int arr[11][11];
+
+int solve(int i = 0, int j = 0)
+{
+    // base case
+    if (i >= n || j >= m)
+        return -1e6;
+    if (i == n - 1 && j == m - 1)
+        return arr[i][j];
+    // transition
+    int right = solve(i, j + 1);
+    int bottom = solve(i + 1, j);
+    return max(right, bottom) + arr[i][j];
+}
+
+int main()
+{
+    ABO_MAZEN;
+    cin >> n >> m;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            cin >> arr[i][j];
+    cout << solve() << endl;
+    return 0;
+}

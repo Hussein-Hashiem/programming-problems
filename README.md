@@ -21,8 +21,10 @@ This repository contains a collection of solved programming problems using C++. 
 - **Bitmasks Sheet** https://codeforces.com/group/isP4JMZTix/contest/395644
 - **Number Theory Sheet** https://codeforces.com/group/isP4JMZTix/contest/397371
 - **Recusrion Sheet** https://codeforces.com/group/MWSDmqGsZm/contest/223339
+- **Recusrion 2 Sheet** https://codeforces.com/group/isP4JMZTix/contest/399005
 
-## How to Use
+## How to Us
+e
 
 - **Explore by Topic**: Browse through the folders in the Root Directory to explore problems related to specific topics.
 
